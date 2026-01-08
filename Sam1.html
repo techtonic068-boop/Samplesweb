@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Alex Sterling, MD | General Practitioner Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --emerald: #064e3b;
+            --gold: #b45309;
+            --cream: #fffdfa;
+            --slate: #1e293b;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--slate);
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            border-bottom: 1px solid #f1f5f9;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--emerald);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section 1: Hero & Philosophy */
+        .hero {
+            padding: 120px 5%;
+            background: var(--cream);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--emerald);
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--slate);
+            max-width: 500px;
+        }
+
+        /* Section 2: Experience Timeline */
+        .timeline-section {
+            padding: 100px 5%;
+        }
+
+        .section-tag {
+            color: var(--gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .timeline-container {
+            border-left: 2px solid #e2e8f0;
+            margin-top: 40px;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -41px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: var(--emerald);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        /* Section 3: Expertise Grid */
+        .expertise {
+            background: var(--emerald);
+            color: var(--white);
+            padding: 100px 5%;
+        }
+
+        .expertise h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-box {
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 20px;
+        }
+
+        .skill-box h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        /* Section 4: Education & Certs */
+        .education {
+            padding: 100px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+        }
+
+        .edu-column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .edu-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        /* Section 5: Long Content (Articles/Philosophy) */
+        .long-form {
+            padding: 100px 15%;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .long-form blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--emerald);
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--slate);
+            color: var(--white);
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-cta {
+            background: var(--gold);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; padding-top: 50px; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .education { gap: 40px; }
+            footer { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Dr. Alex Sterling</div>
+        <ul class="nav-links">
+            <li><a href="#about">Philosophy</a></li>
+            <li><a href="#experience">Clinical History</a></li>
+            <li><a href="#education">Academic</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="hero">
+        <div class="hero-text">
+            <span class="section-tag">General Practitioner</span>
+            <h1>Holistic Care Rooted in Science.</h1>
+            <p>Dedicated to bridging the gap between advanced clinical diagnostics and empathetic patient-centered family medicine.</p>
+        </div>
+        <div class="hero-image">
+            <div style="width: 100%; height: 400px; background: #e2e8f0; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
+                [Professional Portrait Placeholder]
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise">
+        <h2>Clinical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <h4>Preventative Medicine</h4>
+                <p>Chronic disease management including hypertension, diabetes, and lipidology.</p>
+            </div>
+            <div class="skill-box">
+                <h4>Minor Procedures</h4>
+                <p>Expertise in dermatological excisions, joint injections, and suturing techniques.</p>
+            </div>
+            <div class="skill-box">
+                <h4>Mental Health</h4>
+                <p>Integrated approach to anxiety, depression, and stress-related physical symptoms.</p>
+            </div>
+            <div class="skill-box">
+                <h4>Pediatric Care</h4>
+                <p>Developmental milestones, immunizations, and acute childhood illnesses.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="timeline-section">
+        <span class="section-tag">Clinical Experience</span>
+        <h2>A Legacy of Practice</h2>
+        
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <p class="timeline-date">2018 — Present</p>
+                <h3>Senior Medical Partner</h3>
+                <p><strong>Metro Health Centre.</strong> Overseeing a panel of 2,000+ patients, implementing digital health records, and leading the chronic disease clinic.</p>
+            </div>
+            <div class="timeline-item">
+                <p class="timeline-date">2014 — 2018</p>
+                <h3>General Practice Specialist</h3>
+                <p><strong>Riverside Community Hospital.</strong> Specialized in emergency triage and out-of-hours community care delivery.</p>
+            </div>
+            <div class="timeline-item">
+                <p class="timeline-date">2012 — 2014</p>
+                <h3>Medical Resident</h3>
+                <p><strong>State University Teaching Hospital.</strong> Rotations in Cardiology, Pulmonology, and Emergency Medicine.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="edu-column">
+            <span class="section-tag">Education</span>
+            <div class="edu-item">
+                <h3>Doctor of Medicine (MD)</h3>
+                <p>State University Medical School | Graduated with Honors</p>
+            </div>
+            <div class="edu-item">
+                <h3>B.Sc. in Biomedical Sciences</h3>
+                <p>Institute of Science & Research</p>
+            </div>
+        </div>
+        <div class="edu-column">
+            <span class="section-tag">Certifications</span>
+            <div class="edu-item">
+                <h3>Board Certified Family Physician</h3>
+                <p>National Board of Medical Examiners</p>
+            </div>
+            <div class="edu-item">
+                <h3>Advanced Cardiac Life Support (ACLS)</h3>
+                <p>American Heart Association</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="long-form">
+        <blockquote>
+            "Medicine is not just the treatment of symptoms, but the restoration of the person's quality of life through understanding and evidence."
+        </blockquote>
+        <p style="margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Throughout my 15-year career, I have advocated for a "whole-patient" approach. My practice integrates the latest pharmacological advancements with lifestyle medicine to ensure that prevention is as prioritized as the cure.
+        </p>
+    </section>
+
+    <footer id="contact">
+        <div>
+            <h2 class="logo" style="color: white; font-size: 2rem;">Dr. Sterling</h2>
+            <p style="margin-top: 20px; color: #94a3b8;">Available for consultations and speaking engagements regarding community health and medical technology.</p>
+            <a href="mailto:contact@drsterling.com" class="contact-cta">Email the Clinic</a>
+        </div>
+        <div>
+            <h4>Contact Info</h4>
+            <p style="color: #94a3b8; margin-top: 10px;">
+                456 Medical Row<br>
+                Central District, NY<br>
+                (555) 000-1111
+            </p>
+        </div>
+        <div>
+            <h4>Office Hours</h4>
+            <ul style="list-style: none; color: #94a3b8; margin-top: 10px;">
+                <li>Mon - Fri: 8am - 5pm</li>
+                <li>Sat: 9am - 12pm</li>
+                <li>Sun: Closed</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
